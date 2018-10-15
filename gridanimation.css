@@ -4,7 +4,7 @@
     height:600px;
 }
 
-.image2 {
+#overlay-image {
     background-image: url("balconies_grid.png");
     width:600px;
     height: 567px;
@@ -12,13 +12,13 @@
     clip: rect(auto, 400px, auto, auto);
 }
 
-.image1 {
+#base-image {
     width:600px;
     height: 567px;
     position: absolute;
     background-image: url("balconies.png");
 }
 
-.slider {
+#slider {
     width: 600px;
 }

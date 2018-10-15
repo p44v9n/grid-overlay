@@ -1,15 +1,21 @@
 <!doctype html>
 <html>
     <head>
+        <meta charset="UTF-8">
         <link rel="stylesheet" href="./gridanimation.css">
     </head>
     <body>
         <div class="container">
-            <div class="image1"></div>
-            <div class="image2"></div>
+            <div id="base-image"></div>
+            <div id="overlay-image"></div>
         </div>
-        <input class="slider" type="range" max="100" min="0" default="50" />
+        <input id="slider" type="range" max="600" min="0" default="50" onchange="update();" />
     </body>
-    <script >
+    <script type="text/javascript">
+        var sliderValue;
+        update = () => {
+            sliderValue = document.getElementById('slider').value;
+            document.getElementById('overlay-image').style.clip="rect(auto,"+sliderValue+"px, auto, auto";
+        }
     </script>
 </html>
