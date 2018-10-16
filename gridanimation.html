@@ -9,13 +9,15 @@
             <div id="base-image"></div>
             <div id="overlay-image"></div>
         </div>
-        <input id="slider" type="range" max="600" min="0" default="50" onchange="update();" />
+        <input id="slider" type="range" max="600" min="0" default="50" />
     </body>
     <script type="text/javascript">
         var sliderValue;
         update = () => {
             sliderValue = document.getElementById('slider').value;
             document.getElementById('overlay-image').style.clip="rect(auto,"+sliderValue+"px, auto, auto";
+        window.setTimeout("update();", 10); 
         }
+        update();
     </script>
 </html>
